@@ -8,34 +8,15 @@
     <div class="ui fluid raised card chatbox">
       <div class="content">
         <div class="ui medium feed">
+          <% @messages.each do |message| %>
           <div class="event">
             <div class="content">
               <div class="summary">
-                 <em>Elliot Fu</em>: Dimelo acere!!!
+                <em><%= message.user.username %></em>: <%= message.body %>
               </div>
             </div>
           </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Stevie Feliciano</em>: Sapngivity Activity baybeeee
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Helen Troy</em>: Cuba numero uno
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Christian Rocha</em>: Ayyyy que bola
-              </div>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
       <div class="extra content">
